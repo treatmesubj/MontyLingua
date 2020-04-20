@@ -18,7 +18,7 @@ for py_file in Path(path).glob('**/*.py'):
 ... to fix some of the indentation issues. After that, some Python2 methods needed to be transcribed/adjusted to their Python3 equivalents. Some of the file organization/logic was weird so I've changed it so things can be imported and used more easily. I wanted MontyLingua to behave more like a usual package you'd have in your site-packages folder.
 
 ### From the site:
-~~~
+
 Recent bugfixes
 
 Version 2.1 (6 Aug 2004)
@@ -27,7 +27,7 @@ Version 2.1 (6 Aug 2004)
 Version 2.0.1
 - fixes API bug in version 2.0 which prevents java api from being callable
 
-What is MontyLingua? [top]
+What is MontyLingua?
 
 MontyLingua is a free*, commonsense-enriched, end-to-end natural language understander for English. Feed raw English text into MontyLingua, and the output will be a semantic interpretation of that text. Perfect for information retrieval and extraction, request processing, and question answering. From English sentences, it extracts subject/verb/object tuples, extracts adjectives, noun phrases and verb phrases, and extracts people's names, places, events, dates and times, and other semantic information. MontyLingua makes traditionally difficult language processing tasks trivial!
 
