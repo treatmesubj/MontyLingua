@@ -425,4 +425,4 @@ class MontyNLGenerator:
 
 if __name__=="__main__":
     m=MontyNLGenerator()
-    m.reformulate_lifenet()
+    # m.reformulate_lifenet()
