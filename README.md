@@ -16,7 +16,7 @@ for py_file in Path(path).glob('**/*.py'):
     py_file.write_text(py_text)
 ```
 ... to fix some of the indentation issues. After that, some Python2 methods needed to be transcribed/adjusted to their Python3 equivalents.
-The imports are slightly different. I adjusted a few other things. Seems to be working on Python3 now. 
+The imports are slightly different. I adjusted a few other things. Seems to sort of work on Python3 now. Needs some more work.
 
 ### From the site:
 ~~~
