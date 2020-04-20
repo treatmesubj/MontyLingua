@@ -1,5 +1,5 @@
 # MontyLingua
-### A Free, Commonsense-Enriched Natural Language Understander for English (Hugo Liu)
+### A Free, Commonsense-Enriched Natural Language Understander for English
 http://alumni.media.mit.edu/~hugo/montylingua/
 
 
