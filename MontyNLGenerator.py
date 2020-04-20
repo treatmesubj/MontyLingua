@@ -16,6 +16,7 @@ class MontyNLGenerator:
         alias_cleaned={}
         self.morph_dict=alias_cleaned
         cmp_p=MontyUtils.MontyUtils().find_file(self.morph_dict_filename)
+        print(cmp_p)
 
         if not cmp_p:
             print("Morph Dictionary not found...Now Building!")
@@ -229,43 +230,43 @@ class MontyNLGenerator:
         self.load_xtag_morph()
         self.output_morph_dict()
 
-    def reformulate_lifenet(self):
-        case_p=open('action-items.txt','r')
-        cats=case_p.read().split('\n')
-        case_p.close()
-        file_arr=[]
+    # def reformulate_lifenet(self):
+    #     case_p=open('action-items.txt','r')
+    #     cats=case_p.read().split('\n')
+    #     case_p.close()
+    #     file_arr=[]
 
-        for names in cats:
-            file_arr += self.all_egocentric_declarations(names)
-            file_arr +=['']
-        b_dict=open('paraphrased_actions.txt','w')
-        b_dict.write('\n'.join(file_arr))
-        b_dict.close()
-        case_p=open('thing-items.txt','r')
-        cats=case_p.read().split('\n')
-        cats=['see '+arg_cleaned for arg_cleaned in cats]
-        case_p.close()
-        file_arr=[]
+    #     for names in cats:
+    #         file_arr += self.all_egocentric_declarations(names)
+    #         file_arr +=['']
+    #     b_dict=open('paraphrased_actions.txt','w')
+    #     b_dict.write('\n'.join(file_arr))
+    #     b_dict.close()
+    #     case_p=open('thing-items.txt','r')
+    #     cats=case_p.read().split('\n')
+    #     cats=['see '+arg_cleaned for arg_cleaned in cats]
+    #     case_p.close()
+    #     file_arr=[]
 
-        for names in cats:
-            file_arr += self.all_egocentric_declarations(names)
-            file_arr +=['']
-        b_dict=open('paraphrased_things.txt','w')
-        b_dict.write('\n'.join(file_arr))
-        b_dict.close()
-        case_p=open('place-items.txt','r')
-        cats=case_p.read().split('\n')
-        cats=['am '+arg_cleaned for arg_cleaned in cats]
-        case_p.close()
-        file_arr=[]
+    #     for names in cats:
+    #         file_arr += self.all_egocentric_declarations(names)
+    #         file_arr +=['']
+    #     b_dict=open('paraphrased_things.txt','w')
+    #     b_dict.write('\n'.join(file_arr))
+    #     b_dict.close()
+    #     case_p=open('place-items.txt','r')
+    #     cats=case_p.read().split('\n')
+    #     cats=['am '+arg_cleaned for arg_cleaned in cats]
+    #     case_p.close()
+    #     file_arr=[]
 
-        for names in cats:
-            file_arr += self.all_egocentric_declarations(names)
-            file_arr +=['']
-        b_dict=open('paraphrased_places.txt','w')
-        b_dict.write('\n'.join(file_arr))
-        b_dict.close()
-        return
+    #     for names in cats:
+    #         file_arr += self.all_egocentric_declarations(names)
+    #         file_arr +=['']
+    #     b_dict=open('paraphrased_places.txt','w')
+    #     b_dict.write('\n'.join(file_arr))
+    #     b_dict.close()
+    #     return
 
     def all_egocentric_declarations(self,simple_vp):
         names=simple_vp
