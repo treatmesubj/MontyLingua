@@ -10,22 +10,10 @@ import sys
 import re
 from pathlib import Path
 
-
-def main(path):
-    if ".py" == path[-3]:
-        py_file = path
-        py_text = re.sub(r'[\t]', '    ', py_file.read_text())
-        py_file.write_text(py_text)
-
-    else:
-        for py_file in Path(path).glob('**/*.py'):
-            print(f"converting {py_file}")
-            py_text = re.sub(r'[\t]', '    ', py_file.read_text())
-            py_file.write_text(py_text)
-
-
-if __name__ == "__main__":
-    main(sys.argv[1])
+for py_file in Path(path).glob('**/*.py'):
+    print(f"converting {py_file}")
+    py_text = re.sub(r'[\t]', '    ', py_file.read_text())
+    py_file.write_text(py_text)
 ```
 ... to fix some of the indentation issues. After that, some Python2 methods needed to be transcribed/adjusted to their Python3 equivalents.
 The imports are slightly different. I adjusted a few other things. Seems to be working on Python3 pretty well now. 
