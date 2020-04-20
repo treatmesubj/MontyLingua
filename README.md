@@ -17,7 +17,7 @@ for py_file in Path(path).glob('**/*.py'):
 ```
 ... to fix some of the indentation issues. After that, some Python2 methods needed to be transcribed/adjusted to their Python3 equivalents. Some of the file organization/logic was weird so I've changed it so things can be imported and used more easily. I wanted MontyLingua to behave more like a usual package you'd have in your site-packages folder.
 
-### From the site:
+## From the site:
 
 Recent bugfixes
 
