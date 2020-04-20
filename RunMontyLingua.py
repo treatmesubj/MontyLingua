@@ -350,23 +350,24 @@ if __name__ == "__main__":
     print('\n')
 
     try:
-        while 1:
-            sentence = ''
-            try:
-                sentence = input('sentence: ')
-            except:
-                raise
+        # while 1:
+        sentence = ''
+        try:
+            sentence = input('sentence: ')
+        except:
+            raise
 
-            time1 = time.time()
-            print('\n')
-            extractions = m.jist(sentence)                          
-            print(m.pp_info(extractions))
-            predicates_list = [m.parse_pred_arg(a) for a in reduce(lambda y,z:y+z,[x['verb_arg_structures_concise'] for x in extractions])]
-            print(predicates_list)                           
-            print('\nGENERATED SUMMARY:\n'+m.generate_summary(predicates_list))
-                
-            time2= time.time()
-            print("-- monty took",str(round(time2-time1,2)),'seconds. --\n')
+        time1 = time.time()
+        print('\n')
+        extractions = m.jist(sentence)                          
+        print(m.pp_info(extractions))
+        predicates_list = [m.parse_pred_arg(a) for a in reduce(lambda y,z:y+z,[x['verb_arg_structures_concise'] for x in extractions])]
+        print(predicates_list)                           
+        print('\nGENERATED SUMMARY:\n'+m.generate_summary(predicates_list))
+            
+        time2= time.time()
+        print("-- monty took",str(round(time2-time1,2)),'seconds. --\n')
+            # breakpoint()
     except KeyboardInterrupt:
         print("\n-- monty says goodbye! --")
         sys.exit(0)
