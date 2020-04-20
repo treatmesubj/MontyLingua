@@ -16,7 +16,7 @@ class MontyNLGenerator:
         alias_cleaned={}
         self.morph_dict=alias_cleaned
         cmp_p=MontyUtils.MontyUtils().find_file(self.morph_dict_filename)
-        print(cmp_p)
+        # print(cmp_p)
 
         if not cmp_p:
             print("Morph Dictionary not found...Now Building!")
@@ -328,6 +328,21 @@ class MontyNLGenerator:
         return tables
 
     def conjugate_verb(self,verb_lemma,mode):
+        """
+        MontyNLGenerator().conjugate_verb(self, verb_lemma, mode)
+        modes: {
+            'VB': 'INF',
+            'VBD': 'PAST',
+            'VBG': 'PROG',
+            'VBN': 'PPART',
+            'VBP': '['1sg','PRES']',
+            'VBZ': '['3sg','PRES']',
+        }
+        example:
+        >>> MontyNLGenerator().conjugate_verb('run', 'VBD')
+        ran
+        >>>
+        """
         tables=''
 
         if mode=='VB':
