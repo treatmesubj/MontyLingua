@@ -3,7 +3,7 @@
 http://alumni.media.mit.edu/~hugo/montylingua/
 
 
-I was looking for ways to do word conjugation and stumbled across this old language processing toolkit from 2004. 
+I was looking for ways to do word conjugation/tense variation and stumbled across this old language processing toolkit from 2004. 
 I ran `2to3.py -w` on the extracted zip and then...
 ```
 import sys
